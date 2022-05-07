@@ -1,0 +1,10 @@
+{
+  "env": {
+    "development": {
+      "compact": false
+    }
+  },
+
+  "plugins": ["react-optimized-image/plugin"]
+}
+// production use auto: compact

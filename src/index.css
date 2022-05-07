@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "wancore";
+  src: url("/public/fonts/3514FF-Bold.woff2");
+}
+@font-face {
+  font-family: "wancore-header";
+  src: url("/public/fonts/Grtsk-Variable.woff2");
+}
+:root {
+  --bg: #fff;
+  --primary: #1976d2;
+  --dark: #000;
+  --text1: #fff;
+  --text2: blanchedalmond;
+  --text3: #555;
+  --text4: rgb(149, 131, 105);
+  --overlay: #121212;
+}
+body,
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+  font-family: "wancore";
+  font-size: 17px;
+}
+.banner--bg {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background: url("./assets/images/958b01ab6ec65745d6f56e99b6e14809.jpg") !important;
+}
+.brand--img {
+  width: 100px;
+}
+
+.active {
+  width: 20px;
+  background: var(--primary);
+}
