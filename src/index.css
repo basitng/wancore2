@@ -49,3 +49,28 @@ body {
   width: 20px;
   background: var(--primary);
 }
+.phone {
+  margin-top: -12rem !important;
+}
+.color-base {
+  color: var(--primary);
+}
+
+.responsive--footer {
+  width: 100%;
+  padding: 20px 30px;
+  display: grid;
+  place-content: center;
+}
+.responsive--footer a {
+  text-decoration: none;
+  margin: 20px;
+}
+@media screen and (max-width: 620px) {
+  .responsive--footer a {
+    margin: 4px;
+  }
+  .responsive--text {
+    font-size: 2rem !important;
+  }
+}

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
-import { Banner, Caption } from "./Banner.styled";
+import { Caption } from "./Banner.styled";
 import Lottie from "react-lottie";
 import Bg from "../../lottie/97938-background.json";
 import { Button } from "@mui/material";
