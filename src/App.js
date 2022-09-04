@@ -13,6 +13,30 @@ function App() {
     },
     typography: {
       fontFamily: "wancore",
+      h1: {
+        fontFamily: "wancore-header",
+      },
+      h2: {
+        fontFamily: "wancore-header",
+      },
+      h3: {
+        fontFamily: "wancore-header",
+      },
+      h4: {
+        fontFamily: "wancore-header",
+      },
+      h5: {
+        fontSize: "30px",
+      },
+      h6: {
+        fontSize: "25px",
+      },
+      body1: {
+        fontSize: "15px",
+      },
+      body2: {
+        fontSize: "20px",
+      },
     },
   });
   return (

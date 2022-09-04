@@ -1,21 +1,28 @@
+import { Container } from "@mui/material";
 import React from "react";
-import _NavBar from "../components/NavBar";
-import _Banner from "../components/Banner";
-import _About from "../components/About";
-import _Services from "../components/Services";
-import _Partners from "../components/Partners";
-import _Contact from "../components/contact";
-import _Footer from "../components/footer";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import SectionFive from "../components/Sections/SectionFive";
+import SectionFour from "../components/Sections/SectionFour";
+import SectionOne from "../components/Sections/SectionOne";
+import SectionSix from "../components/Sections/SectionSix";
+import SectionThree from "../components/Sections/SectionThree";
+import SectionTwo from "../components/Sections/SectionTwo";
 function Home() {
   return (
     <React.Fragment>
-      <_NavBar />
-      <_Banner />
-      <_About />
-      <_Services />
-      <_Partners />
-      <_Contact />
-      <_Footer />
+      <Navbar />
+      <Banner />
+      <Container>
+        <SectionOne />
+        <SectionTwo />
+        <SectionThree />
+        <SectionFour />
+        <SectionFive />
+        <SectionSix />
+        <Footer />
+      </Container>
     </React.Fragment>
   );
 }

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "wancore-header";
+  src: url("/public/fonts/elevate-v-bold.woff2");
+}
+@font-face {
+  font-family: "wancore";
+  src: url("/public/fonts/elevate-v45.woff2");
+}
 * {
   padding: 0;
   margin: 0;
@@ -8,69 +16,109 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-@font-face {
-  font-family: "wancore";
-  src: url("/public/fonts/3514FF-Bold.woff2");
-}
-@font-face {
-  font-family: "wancore-header";
-  src: url("/public/fonts/Grtsk-Variable.woff2");
-}
-:root {
-  --bg: #fff;
-  --primary: #1976d2;
-  --dark: #000;
-  --text1: #fff;
-  --text2: blanchedalmond;
-  --text3: #555;
-  --text4: rgb(149, 131, 105);
-  --overlay: #121212;
-}
-body,
-html {
-  overflow-x: hidden;
-  width: 100%;
-}
+
 body {
   font-family: "wancore";
-  font-size: 17px;
-}
-.banner--bg {
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background: url("./assets/images/958b01ab6ec65745d6f56e99b6e14809.jpg") !important;
-}
-.brand--img {
-  width: 100px;
+  font-size: 17px !important;
 }
 
-.active {
-  width: 20px;
-  background: var(--primary);
+/* ========================================================
+  ==========================================================
+              Material UI Theme  
+  ==========================================================
+  ==========================================================
+ */
+.MuiButtonBase-root {
+  text-transform: capitalize !important;
+  font-size: 15px !important;
+  border-radius: 48px !important;
 }
-.phone {
-  margin-top: -12rem !important;
-}
-.color-base {
-  color: var(--primary);
+.MuiButtonBase-root-navbar:hover {
+  background: rgba(225, 225, 225, 0.3) !important;
 }
 
-.responsive--footer {
-  width: 100%;
-  padding: 20px 30px;
+/* ========================================================
+  ==========================================================
+              UTILITIES AND CUSTOM STYLES  
+  ==========================================================
+  ==========================================================
+ */
+.place--center {
   display: grid;
   place-content: center;
+  text-align: center;
 }
-.responsive--footer a {
-  text-decoration: none;
-  margin: 20px;
+.use-header-font {
+  font-family: "wancore-header" !important;
 }
-@media screen and (max-width: 620px) {
-  .responsive--footer a {
-    margin: 4px;
-  }
-  .responsive--text {
-    font-size: 2rem !important;
-  }
+.dropdown {
+  position: absolute !important;
+  top: 0px !important;
+  left: 60px;
+  visibility: hidden;
+  opacity: 0;
+  background: white !important;
+  transition: 300ms ease-in-out !important;
+}
+.active-dropdown {
+  visibility: visible;
+  opacity: 1;
+  top: 60px !important;
+  z-index: -3 !important;
+}
+.increase-font-size {
+  font-size: 18px !important;
+}
+.btn--extended {
+  width: 240px !important;
+  height: 60px !important;
+  font-family: "wancore-header" !important;
+  font-size: 18px !important;
+}
+/* ========================================================
+  ==========================================================
+              ELEMENT STYLES
+  ==========================================================
+  ==========================================================
+ */
+.banner--slider {
+  width: 100%;
+  height: 100vh !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.banner--slider::before {
+  content: "";
+  background: indigo;
+  position: absolute;
+  width: 100%;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.banner--caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 900;
+}
+.banner--caption h2 {
+  line-height: 70px !important;
+  color: #fff;
+}
+.enrolment--card {
+  width: 100%;
+  background: url("./assets/images/svgBg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  display: grid;
+  place-content: center;
+  border-radius: 30px;
+  padding: 0px 30px;
 }
