@@ -12,9 +12,9 @@ import { Box } from "@mui/system";
 import { nanoid } from "nanoid";
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar({ persisted }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [persist, setPersist] = React.useState(true);
+  const [persist, setPersist] = React.useState(persisted);
 
   const solutionHandler = () => {
     setIsOpen((state) => !state);
@@ -58,7 +58,7 @@ export default function Navbar() {
     { pathname: "Contact", id: nanoid(), path: "" },
   ];
   return (
-    <AppBar variant="elevation" elevation={0} color="transparent">
+    <AppBar variant="outlined" color="inherit">
       <Toolbar
         sx={{
           display: "flex",

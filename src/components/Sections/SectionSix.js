@@ -20,8 +20,8 @@ export default function SectionSix() {
             color="white"
             sx={{ maxWidth: "60%", mt: 2 }}
           >
-            Enroll for professional I.C.T training that includes, Software
-            Development and Design, Networking, etc.
+            Enrol for professional I.C.T training that includes, Software
+            Development and Design, Networking, FTTH, ...
           </Typography>
           <Button
             variant="contained"

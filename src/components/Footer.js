@@ -31,7 +31,7 @@ export default function Footer() {
     { pathname: "About", id: nanoid(), path: "" },
 
     {
-      pathname: "Fiber To the home",
+      pathname: "FTTH",
       id: nanoid(),
       path: "fiber-to-the-home",
     },

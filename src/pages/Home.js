@@ -12,7 +12,7 @@ import SectionTwo from "../components/Sections/SectionTwo";
 function Home() {
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar persisted={false} />
       <Banner />
       <Container>
         <SectionOne />
