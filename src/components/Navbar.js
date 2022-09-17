@@ -11,6 +11,7 @@ import {
 import { Box } from "@mui/system";
 import { nanoid } from "nanoid";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar({ persisted }) {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -24,7 +25,7 @@ export default function Navbar({ persisted }) {
 
   const links = [
     { pathname: "Home", id: nanoid(), path: "" },
-    { pathname: "About", id: nanoid(), path: "" },
+    { pathname: "About", id: nanoid(), path: "about" },
     {
       pathname: "Solutions",
       id: nanoid(),
@@ -53,9 +54,9 @@ export default function Navbar({ persisted }) {
         },
       ],
     },
-    { pathname: "Our Clients", id: nanoid(), path: "" },
-    { pathname: "Training", id: nanoid(), path: "" },
-    { pathname: "Contact", id: nanoid(), path: "" },
+    { pathname: "Our Clients", id: nanoid(), path: "client" },
+    { pathname: "Training", id: nanoid(), path: "training" },
+    { pathname: "Contact", id: nanoid(), path: "contact" },
   ];
   return (
     <AppBar variant="outlined" color="inherit">
@@ -76,6 +77,8 @@ export default function Navbar({ persisted }) {
                 key={link.id}
                 variant="text"
                 color="inherit"
+                component={Link}
+                to={link.subUl ? "#" : `/${link.path}`}
                 endIcon={link.subUl && <ArrowDropDown />}
                 onClick={link.subUl && link.eventHandler}
                 className="use-header-font increase-font-size MuiButtonBase-root-navbar"
@@ -86,7 +89,9 @@ export default function Navbar({ persisted }) {
               {link.subUl && (
                 <List component={Paper} className={`dropdown ${activeClass}`}>
                   {link.subUl.map(({ pathname, id, path }) => (
-                    <ListItem button>{pathname}</ListItem>
+                    <ListItem component={Link} key={id} to={`/${path}`} button>
+                      {pathname}
+                    </ListItem>
                   ))}
                 </List>
               )}

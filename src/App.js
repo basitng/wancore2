@@ -3,6 +3,10 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import { orange, red } from "@mui/material/colors";
 import About from "./pages/About";
+import EnterpriseBusinessSol from "./pages/solutions/enterprise-business-solutions";
+import EnterpriseNetwoekInf from "./pages/solutions/enterprise-network-infrastructure";
+import FiberToTheHome from "./pages/solutions/fiber-to-the-home";
+import AdvancedBusinessTelephone from "./pages/solutions/advanced-business-telephone";
 
 function App() {
   const theme = createTheme({
@@ -47,6 +51,19 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route
+              path="/enterprise-business-solutions"
+              element={<EnterpriseBusinessSol />}
+            />
+            <Route
+              path="/enterprise-network-infrastructure"
+              element={<EnterpriseNetwoekInf />}
+            />
+            <Route path="/fiber-to-the-home" element={<FiberToTheHome />} />
+            <Route
+              path="/advanced-business-telephone"
+              element={<AdvancedBusinessTelephone />}
+            />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
