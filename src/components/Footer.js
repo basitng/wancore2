@@ -40,6 +40,8 @@ export default function Footer() {
     { pathname: "Training", id: nanoid(), path: "training" },
     { pathname: "Contact", id: nanoid(), path: "contact" },
   ];
+
+  // 48 chivita avenue ajao estate
   return (
     <React.Fragment>
       <Grid container sx={{ mt: 5, p: "30px 0px" }}>
