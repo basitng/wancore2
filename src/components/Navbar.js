@@ -42,9 +42,9 @@ export default function Navbar({ persisted }) {
           path: "enterprise-business-solutions",
         },
         {
-          pathname: "Fiber To the home",
+          pathname: "Server Solutions",
           id: nanoid(),
-          path: "fiber-to-the-home",
+          path: "server-solution.js",
         },
 
         {

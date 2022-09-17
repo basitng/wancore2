@@ -57,9 +57,11 @@ body {
   --color-pink: #eb3dae37;
   --color-pink-dark: #de1798;
   --color-red-light: #fd71713b;
+  --color-red-light: #fd717139;
   --color-red: #fd7171;
   --color-blue: #5bc5fa;
   --color-cyan: #49ccf9;
+  --color-green-light: #6ac95042;
   --color-green: #6bc950;
   --color-teal: #5cc0bf;
   --color-teal-light: #8afcde;
@@ -75,7 +77,8 @@ body {
   --color-brand-instagram: #c32aa3;
   --color-brand-linkedin: #0077b5;
   --color-brand-twitter: #1da1f2;
-  --color-brand-youtube: red;
+  --color-brand-youtube-light: rgba(255, 0, 0, 0.246);
+  --color-brand-youtube: rgba(255, 0, 0, 0.898);
   --color-success: var(--color-green);
   --color-error: var(--color-red);
   --bg-main: var(--color-grey-4);
