@@ -7,6 +7,7 @@ import EnterpriseNetwoekInf from "./pages/solutions/enterprise-network-infrastru
 import AdvancedBusinessTelephone from "./pages/solutions/advanced-business-telephone";
 import ServerToTheHome from "./pages/solutions/server-solution";
 import SmartHomes from "./pages/solutions/smart-homes";
+import Projects from "./pages/projects";
 
 function App() {
   const theme = createTheme({
@@ -52,6 +53,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/smart-home" element={<SmartHomes />} />
+            <Route path="/projects" element={<Projects />} />
             <Route
               path="/enterprise-business-solutions"
               element={<EnterpriseBusinessSol />}
@@ -60,7 +62,7 @@ function App() {
               path="/enterprise-network-infrastructure"
               element={<EnterpriseNetwoekInf />}
             />
-            <Route path="/server-solution.js" element={<ServerToTheHome />} />
+            <Route path="/server-solution" element={<ServerToTheHome />} />
             <Route
               path="/advanced-business-telephone"
               element={<AdvancedBusinessTelephone />}

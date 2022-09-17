@@ -44,9 +44,13 @@ export default function Navbar({ persisted }) {
         {
           pathname: "Server Solutions",
           id: nanoid(),
-          path: "server-solution.js",
+          path: "server-solution",
         },
-
+        {
+          pathname: "Smart Home",
+          id: nanoid(),
+          path: "smart-home",
+        },
         {
           pathname: "Advanced Business Telephone Solution",
           id: nanoid(),
@@ -54,7 +58,7 @@ export default function Navbar({ persisted }) {
         },
       ],
     },
-    { pathname: "Our Clients", id: nanoid(), path: "client" },
+    { pathname: "Project Samples", id: nanoid(), path: "projects" },
     { pathname: "Training", id: nanoid(), path: "training" },
     { pathname: "Contact", id: nanoid(), path: "contact" },
   ];

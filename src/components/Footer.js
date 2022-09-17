@@ -17,6 +17,7 @@ import {
 } from "@mui/material";
 import { nanoid } from "nanoid";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -28,16 +29,16 @@ export default function Footer() {
   const activeClass = isOpen ? "active-dropdown" : "";
   const links = [
     { pathname: "Home", id: nanoid(), path: "" },
-    { pathname: "About", id: nanoid(), path: "" },
+    { pathname: "About", id: nanoid(), path: "about" },
 
     {
       pathname: "FTTH",
       id: nanoid(),
       path: "fiber-to-the-home",
     },
-    { pathname: "Our Clients", id: nanoid(), path: "" },
-    { pathname: "Training", id: nanoid(), path: "" },
-    { pathname: "Contact", id: nanoid(), path: "" },
+    { pathname: "Projects", id: nanoid(), path: "projects" },
+    { pathname: "Training", id: nanoid(), path: "training" },
+    { pathname: "Contact", id: nanoid(), path: "contact" },
   ];
   return (
     <React.Fragment>
@@ -50,10 +51,20 @@ export default function Footer() {
           <Typography variant="h5">Logo</Typography>
         </Grid>
         <Grid item xs={12} md={6} sm={12}>
-          <Box sx={{ display: "flex", position: "relative" }}>
+          <Box
+            sx={(theme) => ({
+              display: "flex",
+              position: "relative",
+              [theme.breakpoints.down("sm")]: {
+                flexDirection: "column",
+              },
+            })}
+          >
             {links.map((link) => (
               <React.Fragment>
                 <Button
+                  component={Link}
+                  to={`/${link.path}`}
                   key={link.id}
                   variant="text"
                   color="inherit"

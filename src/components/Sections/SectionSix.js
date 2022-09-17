@@ -18,7 +18,13 @@ export default function SectionSix() {
           <Typography
             variant="body2"
             color="white"
-            sx={{ maxWidth: "60%", mt: 2 }}
+            sx={(theme) => ({
+              maxWidth: "60%",
+              mt: 2,
+              [theme.breakpoints.down("sm")]: {
+                maxWidth: "100%",
+              },
+            })}
           >
             Enrol for professional I.C.T training that includes, Software
             Development and Design, Networking, FTTH, ...
