@@ -2,15 +2,22 @@ import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { nanoid } from "nanoid";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/components/navigation/navigation.min.css";
-import "swiper/components/pagination/pagination.min.css";
-import "swiper/swiper.min.css";
-import "swiper/swiper-bundle.min.css";
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import NetworkImage from "../assets/images/network.jpg";
 import BusinessSolutionImage from "../assets/images/business-technology.jpg";
 import FiberImage from "../assets/images/smart-home.jpg";
 
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 export default function Banner() {
   const bannerContents = [
     {
@@ -48,7 +55,16 @@ export default function Banner() {
             style={{ backgroundImage: `url(${image})` }}
           >
             <Box className="banner--caption">
-              <Typography variant="h2">{title}</Typography>
+              <Typography
+                sx={(theme) => ({
+                  [theme.breakpoints.down("sm")]: {
+                    lineHeight: "2rem",
+                  },
+                })}
+                variant="h2"
+              >
+                {title}
+              </Typography>
               <Button
                 sx={{ mt: 2 }}
                 className="btn--extended"

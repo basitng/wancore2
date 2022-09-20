@@ -1,7 +1,9 @@
-import { ArrowDropDown } from "@mui/icons-material";
+import { ArrowDropDown, MenuOutlined } from "@mui/icons-material";
 import {
   AppBar,
   Button,
+  Hidden,
+  IconButton,
   List,
   ListItem,
   Paper,
@@ -12,15 +14,20 @@ import { Box } from "@mui/system";
 import { nanoid } from "nanoid";
 import React from "react";
 import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar";
 
 export default function Navbar({ persisted }) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
   const [persist, setPersist] = React.useState(persisted);
 
   const solutionHandler = () => {
     setIsOpen((state) => !state);
   };
 
+  const handleOpenDrawer = () => {
+    setOpen((open) => !open);
+  };
   const activeClass = isOpen ? "active-dropdown" : "";
 
   const links = [
@@ -65,44 +72,63 @@ export default function Navbar({ persisted }) {
   return (
     <AppBar variant="outlined" color="inherit">
       <Toolbar
-        sx={{
+        sx={(theme) => ({
           display: "flex",
           justifyContent: "space-between",
           padding: "0px 100px !important",
-        }}
+          [theme.breakpoints.down("sm")]: {
+            padding: "10px !important",
+          },
+        })}
       >
         <Box>
           <Typography variant="h5">Logo</Typography>
         </Box>
-        <Box sx={{ display: "flex", position: "relative" }}>
-          {links.map((link) => (
-            <React.Fragment>
-              <Button
-                key={link.id}
-                variant="text"
-                color="inherit"
-                component={Link}
-                to={link.subUl ? "#" : `/${link.path}`}
-                endIcon={link.subUl && <ArrowDropDown />}
-                onClick={link.subUl && link.eventHandler}
-                className="use-header-font increase-font-size MuiButtonBase-root-navbar"
-                sx={{ color: persist ? "white" : "#555" }}
-              >
-                {link.pathname}
-              </Button>
-              {link.subUl && (
-                <List component={Paper} className={`dropdown ${activeClass}`}>
-                  {link.subUl.map(({ pathname, id, path }) => (
-                    <ListItem component={Link} key={id} to={`/${path}`} button>
-                      {pathname}
-                    </ListItem>
-                  ))}
-                </List>
-              )}
-            </React.Fragment>
-          ))}
-        </Box>
+        <Hidden mdUp>
+          <IconButton
+            onClick={handleOpenDrawer}
+            sx={{ background: "var(--coral)" }}
+          >
+            <MenuOutlined />
+          </IconButton>
+        </Hidden>
+        <Hidden smDown>
+          <Box sx={{ display: "flex", position: "relative" }}>
+            {links.map((link) => (
+              <React.Fragment>
+                <Button
+                  key={link.id}
+                  variant="text"
+                  color="inherit"
+                  component={Link}
+                  to={link.subUl ? "#" : `/${link.path}`}
+                  endIcon={link.subUl && <ArrowDropDown />}
+                  onClick={link.subUl && link.eventHandler}
+                  className="use-header-font increase-font-size MuiButtonBase-root-navbar"
+                  sx={{ color: persist ? "white" : "#555" }}
+                >
+                  {link.pathname}
+                </Button>
+                {link.subUl && (
+                  <List component={Paper} className={`dropdown ${activeClass}`}>
+                    {link.subUl.map(({ pathname, id, path }) => (
+                      <ListItem
+                        component={Link}
+                        key={id}
+                        to={`/${path}`}
+                        button
+                      >
+                        {pathname}
+                      </ListItem>
+                    ))}
+                  </List>
+                )}
+              </React.Fragment>
+            ))}
+          </Box>
+        </Hidden>
       </Toolbar>
+      <Sidebar trigger={open} setOpen={setOpen} />
     </AppBar>
   );
 }

@@ -12,16 +12,48 @@ export default function SectionOne() {
       alignItems="center"
       justifyContent="center"
     >
-      <Grid item xs={12} md={7} sm={12} sx={{ marginTop: "80px" }}>
+      <Grid
+        item
+        xs={12}
+        md={7}
+        sm={12}
+        sx={(theme) => ({
+          marginTop: "80px",
+          [theme.breakpoints.down("sm")]: {
+            marginTop: "60px",
+          },
+        })}
+      >
         <Typography variant="h2" fontWeight="bold">
           A strong ecosystem, powered by wancore systems
         </Typography>
       </Grid>
-      <Grid item xs={12} md={5} sm={12} sx={{ marginTop: "80px" }}>
-        <img src={AvatarSvg} style={{ width: 450 }} />
+      <Grid
+        item
+        xs={12}
+        md={5}
+        sm={12}
+        sx={(theme) => ({
+          marginTop: "80px",
+          [theme.breakpoints.down("sm")]: {
+            marginTop: "40px",
+          },
+        })}
+      >
+        <img src={AvatarSvg} style={{ width: 450 }} className="hidden--image" />
       </Grid>
       <Grid item xs={12} md={12} sm={12}>
-        <Typography variant="h5" sx={{ p: "150px 100px" }} align="center">
+        <Typography
+          variant="h5"
+          sx={(theme) => ({
+            p: "150px 100px",
+            [theme.breakpoints.down("sm")]: {
+              p: "10px",
+              fontSize: "23px",
+            },
+          })}
+          align="center"
+        >
           From providing of great products to customers, Wancore system is
           always available for you anytime any day.
         </Typography>
