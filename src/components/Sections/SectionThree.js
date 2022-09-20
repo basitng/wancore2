@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import { red } from "@mui/material/colors";
 import ReliableImage from "../../assets/images/reliable.jpg";
+import { Link } from "react-router-dom";
 export default function SectionThree() {
   return (
     <Grid container spacing={2} sx={{ mt: 12 }} alignItems="center">
@@ -16,7 +17,13 @@ export default function SectionThree() {
           Wancore System is supported and used by well-known brands around
           Nigeria, and maintain by a team of multi talented individuals
         </Typography>
-        <Button variant="outlined" size="large" sx={{ mt: 2 }}>
+        <Button
+          variant="outlined"
+          component={Link}
+          to={`/${about}`}
+          size="large"
+          sx={{ mt: 2 }}
+        >
           Explore the ecosystem
         </Button>
       </Grid>

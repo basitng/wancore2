@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import { green } from "@mui/material/colors";
 import BusinessImage from "../../assets/images/business-technology.jpg";
+import { Link } from "react-router-dom";
 export default function SectionFour() {
   return (
     <Grid container spacing={2} sx={{ mt: 12 }} alignItems="center">
@@ -20,7 +21,13 @@ export default function SectionFour() {
           need by using the most eficient technology to resolve their various
           issues.
         </Typography>
-        <Button variant="outlined" size="large" sx={{ mt: 2 }}>
+        <Button
+          component={Link}
+          to={`/${about}`}
+          variant="outlined"
+          size="large"
+          sx={{ mt: 2 }}
+        >
           Explore brands
         </Button>
       </Grid>

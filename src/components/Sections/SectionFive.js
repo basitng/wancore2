@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import { indigo, red } from "@mui/material/colors";
 import BusinessImage from "../../assets/images/happy-experience.jpg";
+import { Link } from "react-router-dom";
 export default function SectionFive() {
   return (
     <Grid container spacing={2} sx={{ mt: 12 }} alignItems="center">
@@ -16,7 +17,13 @@ export default function SectionFive() {
           Take control of your business and grow your brand with the help of
           rich customer experience brought to you by Wancore Systems
         </Typography>
-        <Button variant="outlined" size="large" sx={{ mt: 2 }}>
+        <Button
+          component={Link}
+          to={`/${about}`}
+          variant="outlined"
+          size="large"
+          sx={{ mt: 2 }}
+        >
           Explore Wancore systems
         </Button>
       </Grid>

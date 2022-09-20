@@ -2,6 +2,7 @@ import React from "react";
 import wancoreTeam from "../../../assets/images/img5.jpeg";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import { Link } from "react-router-dom";
 
 export default function SectionFour() {
   return (
@@ -40,6 +41,8 @@ export default function SectionFour() {
               sx={{ mt: 3 }}
               disableElevation
               size="large"
+              component={Link}
+              to={`/${projects}`}
             >
               view projects
             </Button>

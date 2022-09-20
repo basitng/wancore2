@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function SectionSix() {
   return (
@@ -32,6 +33,8 @@ export default function SectionSix() {
           <Button
             variant="contained"
             size="large"
+            component={Link}
+            to={`/${course}`}
             sx={{
               width: "200px",
               mt: 2,
