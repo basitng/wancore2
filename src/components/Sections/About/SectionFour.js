@@ -42,7 +42,7 @@ export default function SectionFour() {
               disableElevation
               size="large"
               component={Link}
-              to={`/${projects}`}
+              to={`/projects`}
             >
               view projects
             </Button>

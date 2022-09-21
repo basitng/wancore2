@@ -20,7 +20,7 @@ export default function SectionThree() {
         <Button
           variant="outlined"
           component={Link}
-          to={`/${about}`}
+          to={`/about`}
           size="large"
           sx={{ mt: 2 }}
         >

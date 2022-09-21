@@ -19,7 +19,7 @@ export default function SectionFive() {
         </Typography>
         <Button
           component={Link}
-          to={`/${about}`}
+          to={`/about`}
           variant="outlined"
           size="large"
           sx={{ mt: 2 }}

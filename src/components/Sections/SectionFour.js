@@ -23,7 +23,7 @@ export default function SectionFour() {
         </Typography>
         <Button
           component={Link}
-          to={`/${about}`}
+          to={`/about`}
           variant="outlined"
           size="large"
           sx={{ mt: 2 }}
