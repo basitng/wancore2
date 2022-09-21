@@ -34,7 +34,7 @@ export default function Footer() {
     {
       pathname: "FTTH",
       id: nanoid(),
-      path: "fiber-to-the-home",
+      path: "server-solution",
     },
     { pathname: "Projects", id: nanoid(), path: "projects" },
     { pathname: "Training", id: nanoid(), path: "training" },
