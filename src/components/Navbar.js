@@ -15,11 +15,11 @@ import { nanoid } from "nanoid";
 import React from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import logo from "../assets/logo.png";
 
-export default function Navbar({ persisted }) {
+export default function Navbar({ bg, color, raised }) {
   const [isOpen, setIsOpen] = React.useState(false);
   const [open, setOpen] = React.useState(false);
-  const [persist, setPersist] = React.useState(persisted);
 
   const solutionHandler = () => {
     setIsOpen((state) => !state);
@@ -70,7 +70,7 @@ export default function Navbar({ persisted }) {
     { pathname: "Contact", id: nanoid(), path: "contact" },
   ];
   return (
-    <AppBar variant="outlined" color="inherit">
+    <AppBar elevation={raised} sx={{ background: bg }}>
       <Toolbar
         sx={(theme) => ({
           display: "flex",
@@ -82,7 +82,7 @@ export default function Navbar({ persisted }) {
         })}
       >
         <Box>
-          <Typography variant="h5">Logo</Typography>
+          <img src={logo} style={{ width: "80px", height: "80px" }} />
         </Box>
         <Hidden mdUp>
           <IconButton
@@ -99,13 +99,12 @@ export default function Navbar({ persisted }) {
                 <Button
                   key={link.id}
                   variant="text"
-                  color="inherit"
                   component={Link}
                   to={link.subUl ? "#" : `/${link.path}`}
                   endIcon={link.subUl && <ArrowDropDown />}
                   onClick={link.subUl && link.eventHandler}
                   className="use-header-font increase-font-size MuiButtonBase-root-navbar"
-                  sx={{ color: persist ? "white" : "#555" }}
+                  sx={{ color: `${color} !important` }}
                 >
                   {link.pathname}
                 </Button>
