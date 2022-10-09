@@ -485,3 +485,51 @@ a {
   border-radius: 10px !important;
   background: var(--color-brand-facebook) !important;
 }
+.animated-btn {
+  animation: bounce 3000ms ease-in infinite;
+}
+.animated-btn:hover {
+  animation: goCrazy 300ms ease infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes goCrazy {
+  0% {
+    transform: scale(0.9);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+.training-span {
+  /* display: block; */
+  padding: 3px;
+  border-radius: 100px;
+  display: block;
+  background: #f25d50;
+}
+
+@media screen and (max-width: 600px) {
+  .training-span {
+    background-color: transparent;
+    border-radius: 0px;
+    padding: 10px 0px;
+    color: rgba(225, 225, 225, 90);
+  }
+  .animated-btn {
+    animation: goCrazy 500ms ease infinite;
+    margin-bottom: 30px !important;
+  }
+}

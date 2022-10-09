@@ -8,6 +8,8 @@ import AdvancedBusinessTelephone from "./pages/solutions/advanced-business-telep
 import ServerToTheHome from "./pages/solutions/server-solution";
 import SmartHomes from "./pages/solutions/smart-homes";
 import Projects from "./pages/projects";
+import Contact from "./pages/Contact";
+import Training from "./pages/Training";
 
 function App() {
   const theme = createTheme({
@@ -54,6 +56,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/smart-home" element={<SmartHomes />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/training" element={<Training />} />
+            <Route path="/contact" element={<Contact />} />
             <Route
               path="/enterprise-business-solutions"
               element={<EnterpriseBusinessSol />}
