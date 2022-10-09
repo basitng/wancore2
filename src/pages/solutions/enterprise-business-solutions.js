@@ -65,13 +65,9 @@ export default function EnterpriseBusinessSol() {
     },
   ];
 
-  const { ref: myRef, inView, entry } = useInView();
-  const changeText = inView ? "#fff" : "#555";
-  const changeBg = inView ? "transparent" : "#fff";
-  const changeElev = inView ? 0 : 1;
   return (
     <React.Fragment>
-      <Navbar color={changeText} raised={changeElev} bg={changeBg} />
+      <Navbar color="#555" raised={2} bg={"#fff"} />
       <Container>
         <Box
           className="place--center"
