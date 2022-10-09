@@ -54,7 +54,7 @@ export default function Navbar({ bg, color, raised }) {
           path: "server-solution",
         },
         {
-          pathname: "Smart Home",
+          pathname: "Fiber Access Network (FTTH)",
           id: nanoid(),
           path: "smart-home",
         },

@@ -1,6 +1,7 @@
 import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 export default function Training() {
@@ -40,29 +41,35 @@ export default function Training() {
               color="white"
               textTransform={"capitalize"}
             >
-              Become an expert in programming By Subscribing to{" "}
-              <span>Ajaga Abdul Basit</span>
+              A very basic introduction to programming by Mr. Code Matrix
             </Typography>
             <Typography
               variant="body2"
               color="whitesmoke"
               sx={{ m: "10px 0px" }}
             >
-              Follow Mr. Code Matrix Channel today, to become an expert in
-              programming with{" "}
+              We train organizations and enterprise on software development to
+              an expert level.{" "}
               <span className="training-span">
                 {" "}
                 JavaScript, Typescript, C#, Dart, C++, Java, Kotlin and Swift UI
               </span>
             </Typography>
-            <Button
-              className="btn--extended animated-btn"
-              sx={{ marginTop: 1 }}
-              size="large"
-              variant="contained"
+            <a
+              target="_blank"
+              rel="noopener"
+              aria-label="Github"
+              href="https://www.youtube.com/channel/UCzaLdWRGDkKSeZ9dtOvusVQ"
             >
-              Enroll Now for free
-            </Button>
+              <Button
+                className="btn--extended animated-btn"
+                sx={{ marginTop: 1 }}
+                size="large"
+                variant="contained"
+              >
+                Enroll Now
+              </Button>
+            </a>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>

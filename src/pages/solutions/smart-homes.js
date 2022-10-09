@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 export default function SmartHomes() {
   return (
     <React.Fragment>
-      <Navbar color="#555" raised={2} bg={"#fff"}/>
+      <Navbar color="#555" raised={2} bg={"#fff"} />
       <Container>
         <Grid
           container
@@ -33,7 +33,7 @@ export default function SmartHomes() {
               variant="body2"
               fontWeight={"bold"}
               sx={{ color: deepOrange[600] }}
-            >{`Smart Home`}</Typography>
+            >{`Fiber Access Network`}</Typography>
             <Typography variant="h4" textTransform={"capitalize"}>
               Fiber-to-the-home deployment {""} (FTTH)
             </Typography>
