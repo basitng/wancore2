@@ -1,4 +1,5 @@
 import { PhoneOutlined, WifiOutlined } from "@mui/icons-material";
+import { useInView } from "react-intersection-observer";
 import { Container, Grid, IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { nanoid } from "nanoid";
@@ -35,9 +36,14 @@ export default function AdvancedBusinessTelephone() {
       backgroundColor: "--color-red-light",
     },
   ];
+const { ref: myRef, inView, entry } = useInView();
+
+  const changeText = inView ? "#fff" : "#555";
+  const changeBg = inView ? "transparent" : "#fff";
+  const changeElev = inView ? 0 : 1;
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar color="#555" raised={2} bg={"#fff"}/>
       <Container>
         <Box
           className="place--center"
