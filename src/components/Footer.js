@@ -17,6 +17,7 @@ import {
 } from "@mui/material";
 import { nanoid } from "nanoid";
 import React from "react";
+import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -55,7 +56,7 @@ export default function Footer() {
           sx={{ color: "#555", width: "100%", height: "20px", mb: 5 }}
         ></Divider>
         <Grid item xs={12} md={4} sm={12}>
-          <Typography variant="h5">Logo</Typography>
+          <img src={logo} style={{ width: "80px", height: "80px" }} />
         </Grid>
         <Grid item xs={12} md={6} sm={12}>
           <Box
