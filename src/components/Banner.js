@@ -12,7 +12,7 @@ import SwiperCore, {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import { Link } from "react-router-dom";
 import NetworkImage from "../assets/images/network.jpg";
 import BusinessSolutionImage from "../assets/images/business-technology.jpg";
 import FiberImage from "../assets/images/smart-home.jpg";
@@ -71,6 +71,8 @@ export default function Banner() {
                 variant="contained"
                 disableElevation
                 size="large"
+                component={Link}
+                to="/about"
               >
                 {btnText}
               </Button>
