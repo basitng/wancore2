@@ -9,7 +9,7 @@ import Navbar from "../../components/Navbar";
 export default function Course() {
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar color="#555" raised={2} bg={"#fff"} />
       <Container>
         <Box
           className="place--center"
