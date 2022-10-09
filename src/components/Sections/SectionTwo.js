@@ -34,7 +34,7 @@ export default function SectionTwo() {
       id: nanoid(),
       image: SoftwareImage,
       content:
-        "Hyperlink Technologies leverages its consulting team’s expertise in custom application design, development and integration services to provide our clients with the most…",
+        "Wancore Systems leverages its consulting team’s expertise in custom application design, development and integration services to provide our clients with the most…",
     },
     {
       title: "Enterprise Security Solutions",
