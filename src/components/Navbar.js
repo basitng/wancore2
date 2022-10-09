@@ -81,7 +81,7 @@ export default function Navbar({ bg, color, raised }) {
           },
         })}
       >
-        <Box>
+        <Box component={Link} to="/">
           <img src={logo} style={{ width: "80px", height: "80px" }} />
         </Box>
         <Hidden mdUp>
