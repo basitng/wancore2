@@ -66,7 +66,7 @@ export default function Banner() {
                 {title}
               </Typography>
               <Button
-                sx={{ mt: 2 }}
+                sx={{ mt: 2, color: "#FFF" }}
                 className="btn--extended"
                 variant="contained"
                 disableElevation
