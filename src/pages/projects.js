@@ -9,7 +9,7 @@ import gallery from "./global";
 export default function Projects() {
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar color="#555" raised={2} bg={"#fff"} />
       <Container
         sx={(theme) => ({
           p: "100px 100px",
