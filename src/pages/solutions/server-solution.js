@@ -76,7 +76,7 @@ export default function ServerToTheHome() {
   ];
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar color="#555" raised={2} bg={"#fff"} />
       <Container>
         <Box
           className="place--center"
