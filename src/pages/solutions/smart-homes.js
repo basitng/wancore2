@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 export default function SmartHomes() {
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar color="#555" raised={2} bg={"#fff"}/>
       <Container>
         <Grid
           container
