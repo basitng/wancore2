@@ -6,6 +6,7 @@ import {
 import { Container, Grid, IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { nanoid } from "nanoid";
+import { useInView } from "react-intersection-observer";
 import React from "react";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
@@ -22,7 +23,7 @@ export default function EnterpriseBusinessSol() {
       backgroundColor: "--color-purple",
     },
     {
-      title: `⦁	Financials for Office 365 is more than just accounting software. It's your complete business solution in the cloud. With integration to the Microsoft Office applications you know and use, Financials for Office 365 is familiar and simple-to-use for small and growing businesses at a truly affordable price.
+      title: `Financials for Office 365 is more than just accounting software. It's your complete business solution in the cloud. With integration to the Microsoft Office applications you know and use, Financials for Office 365 is familiar and simple-to-use for small and growing businesses at a truly affordable price.
         `,
       id: nanoid(),
 
@@ -34,7 +35,7 @@ export default function EnterpriseBusinessSol() {
 
     {
       title:
-        "⦁SAGE 300 People (HR and payroll solutions): comprises an agile, innovative and cost-effective HR solution that effortlessly and powerfully processes HR and payroll functions in your business",
+        "SAGE 300 People (HR and payroll solutions): comprises an agile, innovative and cost-effective HR solution that effortlessly and powerfully processes HR and payroll functions in your business",
       id: nanoid(),
 
       icon: <BusinessOutlined sx={{ color: "#fff" }} />,
@@ -44,7 +45,7 @@ export default function EnterpriseBusinessSol() {
     },
 
     {
-      title: `⦁	Software/App Development:  We develop software based on client’ request in order to meet up with their business needs.
+      title: `Software/App Development:  We develop software based on client’ request in order to meet up with their business needs.
       `,
       id: nanoid(),
 
@@ -54,7 +55,7 @@ export default function EnterpriseBusinessSol() {
       backgroundColor: "--color-brand-instagram-light",
     },
     {
-      title: `⦁	Automation of account department using Microsoft Dynamics GP:
+      title: `Automation of account department using Microsoft Dynamics GP:
       Bring greater control over your financials, inventory, and operations with Dynamics GP, a business management solution for small and medium-sized businesses that go beyond accounting software. Get up and running quickly with a solution that’s flexible, configurable, and designed to grow with you.
       `,
       id: nanoid(),
@@ -63,9 +64,14 @@ export default function EnterpriseBusinessSol() {
       backgroundColor: "--color-pink",
     },
   ];
+
+  const { ref: myRef, inView, entry } = useInView();
+  const changeText = inView ? "#fff" : "#555";
+  const changeBg = inView ? "transparent" : "#fff";
+  const changeElev = inView ? 0 : 1;
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar color={changeText} raised={changeElev} bg={changeBg} />
       <Container>
         <Box
           className="place--center"
