@@ -12,7 +12,7 @@ import SectionSix from "../components/Sections/SectionSix";
 export default function About() {
   return (
     <React.Fragment>
-      <Navbar persisted={false} />
+      <Navbar color="#555" raised={2} bg={"#fff"} />
       <SectionOne />
       <Box className="0--bg">
         <Container>
