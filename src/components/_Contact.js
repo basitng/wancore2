@@ -100,11 +100,30 @@ export default function Contact() {
               <Divider />
               <ListItem>
                 <ListItemIcon>
+                  <HeadsetMicOutlined />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Other Official Line"
+                  secondary="+234 803 393 5916"
+                />
+              </ListItem>
+              <Divider />
+              <ListItem>
+                <ListItemIcon>
                   <MarkunreadOutlined />
                 </ListItemIcon>
                 <ListItemText
                   primary="Official Email Address"
                   secondary="info@wancoreng.com"
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <MarkunreadOutlined />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Other Official Mail"
+                  secondary="wancore.system@gmail.com"
                 />
               </ListItem>
             </List>
