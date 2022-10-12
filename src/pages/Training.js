@@ -1,4 +1,5 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Chip, Grid, Typography } from "@mui/material";
+import { orange } from "@mui/material/colors";
 import { Box } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -50,10 +51,41 @@ export default function Training() {
             >
               We train organizations and enterprise on software development to
               an expert level.{" "}
-              <span className="training-span">
+              <Box sx={{ display: "flex", alignItems: "center" }}>
                 {" "}
-                JavaScript, Typescript, C#, Dart, C++, Java, Kotlin and Swift UI
-              </span>
+                <Chip
+                  sx={{ backgroundColor: orange[800], m: 0.3, color: "white" }}
+                  label={"JavaScript"}
+                />
+                <Chip
+                  sx={{ backgroundColor: orange[800], m: 0.3, color: "white" }}
+                  label={"Typescript"}
+                />
+                <Chip
+                  sx={{ backgroundColor: orange[800], m: 0.3, color: "white" }}
+                  label={"C#"}
+                />
+                <Chip
+                  sx={{ backgroundColor: orange[800], m: 0.3, color: "white" }}
+                  label={"Dart"}
+                />
+                <Chip
+                  sx={{ backgroundColor: orange[800], m: 0.3, color: "white" }}
+                  label={"C++"}
+                />
+                <Chip
+                  sx={{ backgroundColor: orange[800], m: 0.3, color: "white" }}
+                  label={"Java"}
+                />
+                <Chip
+                  sx={{ backgroundColor: orange[800], m: 0.3, color: "white" }}
+                  label={"Kotlin"}
+                />
+                <Chip
+                  sx={{ backgroundColor: orange[800], m: 0.3, color: "white" }}
+                  label={"Swift UI"}
+                />
+              </Box>
             </Typography>
             <a
               target="_blank"
