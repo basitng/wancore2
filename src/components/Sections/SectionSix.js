@@ -34,7 +34,7 @@ export default function SectionSix() {
             variant="contained"
             size="large"
             component={Link}
-            to={`/course`}
+            to={`/training`}
             sx={{
               width: "200px",
               mt: 2,
