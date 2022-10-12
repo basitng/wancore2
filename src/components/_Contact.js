@@ -94,8 +94,7 @@ export default function Contact() {
                 </ListItemIcon>
                 <ListItemText
                   primary="Official Phone Number"
-                  secondary="+234 905 738 7754,
-                  +234 803 393 5916"
+                  secondary="+234 803 393 5916, +234 905 738 7754"
                 />
               </ListItem>
               <Divider />

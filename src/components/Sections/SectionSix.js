@@ -49,3 +49,11 @@ export default function SectionSix() {
     </Grid>
   );
 }
+
+// We are ICT company that creates enabling environment for smart homes (Estates, State, Big company etc.) by deploying Fiber to the Home (FTTH) technology, both inside and outside deployment….
+
+// We build standard Data Center as central office where all equipment and service users are administer.
+
+// Think of enjoying your zoom meeting , IPTv, Netflix, Watch matches online, connect your CCTV online , access control all can work on fiber optics at speed of light...
+
+// We are open to business (B2B) by seeking for referrers from  estate developers, campuses, big organization with large geographical sizes, business owner who want to be ISP, ISPs etc...
