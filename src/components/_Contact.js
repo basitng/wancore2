@@ -94,17 +94,8 @@ export default function Contact() {
                 </ListItemIcon>
                 <ListItemText
                   primary="Official Phone Number"
-                  secondary="+234 905 738 7754"
-                />
-              </ListItem>
-              <Divider />
-              <ListItem>
-                <ListItemIcon>
-                  <HeadsetMicOutlined />
-                </ListItemIcon>
-                <ListItemText
-                  primary="Other Official Line"
-                  secondary="+234 803 393 5916"
+                  secondary="+234 905 738 7754,
+                  +234 803 393 5916"
                 />
               </ListItem>
               <Divider />
@@ -114,16 +105,8 @@ export default function Contact() {
                 </ListItemIcon>
                 <ListItemText
                   primary="Official Email Address"
-                  secondary="info@wancoreng.com"
-                />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <MarkunreadOutlined />
-                </ListItemIcon>
-                <ListItemText
-                  primary="Other Official Mail"
-                  secondary="wancore.system@gmail.com"
+                  secondary="info@wancoreng.com,
+                  wancore.system@gmail.com"
                 />
               </ListItem>
             </List>
