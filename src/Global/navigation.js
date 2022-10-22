@@ -20,7 +20,7 @@ const navigation = [
     path: "server-solution",
   },
   {
-    pathname: "Smart Home",
+    pathname: "Fiber To The Home (FTTH)",
     id: nanoid(),
     path: "smart-home",
   },
