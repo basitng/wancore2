@@ -33,7 +33,7 @@ export default function Banner() {
       image: BusinessSolutionImage,
     },
     {
-      title: "Fiber To The Home ",
+      title: "Fiber Access Network",
       id: nanoid(),
       btnText: "Get started",
       image: FiberImage,
