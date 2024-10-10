@@ -67,7 +67,7 @@ export default function Navbar({ bg, color, raised }) {
     },
     { pathname: "Project Samples", id: nanoid(), path: "projects" },
     { pathname: "Training", id: nanoid(), path: "training" },
-    { pathname: "Contact", id: nanoid(), path: "contact" },
+    // { pathname: "Contact", id: nanoid(), path: "contact" },
   ];
   return (
     <AppBar elevation={raised} sx={{ background: bg }}>
